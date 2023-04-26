@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dark-roasted-coffee-api", "dark-roasted-coffee-api\dark-roasted-coffee-api.csproj", "{A96F3F03-2C4F-4106-A6EA-1E0AC926277E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkRoastedCoffee.Test", "DarkRoastedCoffee.Test\DarkRoastedCoffee.Test.csproj", "{F598EE61-EB07-4E68-9B52-DB297467C01D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A96F3F03-2C4F-4106-A6EA-1E0AC926277E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A96F3F03-2C4F-4106-A6EA-1E0AC926277E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A96F3F03-2C4F-4106-A6EA-1E0AC926277E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A96F3F03-2C4F-4106-A6EA-1E0AC926277E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F598EE61-EB07-4E68-9B52-DB297467C01D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F598EE61-EB07-4E68-9B52-DB297467C01D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F598EE61-EB07-4E68-9B52-DB297467C01D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F598EE61-EB07-4E68-9B52-DB297467C01D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83D2DD2F-68B1-4040-A55F-8F794F482E92}
+	EndGlobalSection
+EndGlobal
