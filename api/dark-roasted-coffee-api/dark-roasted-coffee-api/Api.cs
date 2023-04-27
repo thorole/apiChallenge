@@ -1,6 +1,6 @@
 ﻿using dark_roasted_coffee_api.data.HandleData;
 using dark_roasted_coffee_api.data.Models;
-using System.Runtime.CompilerServices;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace dark_roasted_coffee_api
 {
@@ -10,8 +10,6 @@ namespace dark_roasted_coffee_api
         public static void ConfigureApi(this WebApplication app)
         {
             app.MapGet("/coffeedrinks", GetAll)
-                .Produces<List<CoffeeDrink>>(StatusCodes.Status200OK)
-                .Produces(StatusCodes.Status404NotFound)
                 .WithName("listCoffeeDrinks")
                 .WithTags("Coffee Drinks")
                 .WithOpenApi(operation => new(operation)
@@ -21,8 +19,6 @@ namespace dark_roasted_coffee_api
                 });
 
             app.MapGet("/coffeedrinks{id}", GetOne)
-                .Produces<List<CoffeeDrink>>(StatusCodes.Status200OK)
-                .Produces(StatusCodes.Status404NotFound)
                 .WithName("retrieveCoffeeDrink")
                 .WithTags("Coffee Drinks")
                 .WithOpenApi(operation => new(operation)
@@ -31,7 +27,9 @@ namespace dark_roasted_coffee_api
                     Description = "Retrieves a single `Coffee Drink` object. It has details about a particular coffee drink."
                 });
 
-            static async Task<IResult> GetAll (IGetData data)
+
+            //Return type TypedResults make sure response types are described in swagger
+            static async Task<Results<Ok<IEnumerable<CoffeeDrink>>, NotFound>> GetAll(IGetData data)
             {
                 return await data.GetAllAsync()
                 is IEnumerable<CoffeeDrink> coffeeDrinks
@@ -39,7 +37,7 @@ namespace dark_roasted_coffee_api
                 : TypedResults.NotFound();
             }
 
-            static async Task<IResult> GetOne(IGetData data, int id)
+            static async Task<Results<Ok<IEnumerable<CoffeeDrink>>, NotFound>> GetOne(IGetData data, int id)
             {
                 var result = await data.GetOneAsync(id);
                 return result.Any() ? TypedResults.Ok(result) : TypedResults.NotFound();
