@@ -1,5 +1,5 @@
 ﻿using dark_roasted_coffee_api.data.HandleData;
-using dark_roasted_coffee_api.data.Models;
+using dark_roasted_coffee_api.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace dark_roasted_coffee_api

@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 using JsonConverter = System.Text.Json.Serialization.JsonConverter;
 using JsonConverterAttribute = System.Text.Json.Serialization.JsonConverterAttribute;
 
-namespace dark_roasted_coffee_api.data.Models
+namespace dark_roasted_coffee_api.Models
 {
 
     [JsonConverter(typeof(JsonStringEnumConverter))]
@@ -20,7 +20,7 @@ namespace dark_roasted_coffee_api.data.Models
 
         [EnumMember(Value = "Single")]
         Single = 4,
-        
+
         [EnumMember(Value = "Double")]
         Double = 5,
 
