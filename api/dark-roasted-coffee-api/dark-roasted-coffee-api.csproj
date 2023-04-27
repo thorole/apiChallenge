@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include=".assets\exceptDev.png" />
     <Content Include=".assets\visual-reference.png" />
+    <Content Include=".assets\xunitTest.png" />
   </ItemGroup>
 
   <ItemGroup>
